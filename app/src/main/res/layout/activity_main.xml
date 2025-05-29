@@ -1,0 +1,70 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layoutMain"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#222"
+    android:gravity="center"
+    android:paddingTop="40dp"
+    android:paddingBottom="0dp">
+
+    <!-- Tablero del juego -->
+    <com.example.tetrisapp.ui.components.TetrisBoard
+        android:id="@+id/tetrisBoard"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#333"
+        android:layout_marginBottom="32dp" />
+
+    <!-- Controles inferiores -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="#222"
+        android:paddingStart="4dp"
+        android:paddingEnd="4dp">
+
+        <!-- Botón Bajar -->
+        <Button
+            android:id="@+id/btnDown"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:text="BAJAR"
+            android:textAllCaps="true"
+            android:textSize="16sp" />
+
+        <!-- Puntaje al centro -->
+        <TextView
+            android:id="@+id/tvPoints"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="#000"
+            android:text="Puntos: 0&#10;Nivel: 1"
+            android:textColor="#FFF"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <!-- Botón Rotar -->
+        <Button
+            android:id="@+id/btnRotate"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:text="ROTAR"
+            android:textAllCaps="true"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <!-- View invisible para dejar espacio abajo (ajusta el alto si quieres más o menos espacio) -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@android:color/transparent" />
+
+</LinearLayout>
